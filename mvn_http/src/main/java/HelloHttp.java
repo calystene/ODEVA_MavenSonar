@@ -1,0 +1,23 @@
+import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.methods.*;
+import java.io.*;
+
+public class HelloHttp {
+        public static void main(String a[]) throws HttpException, IOException{
+                String url=a.length>0?a[0]:"http://www.fil.univ-lille1.fr/";
+                if (!url.contains("://")) url="http://"+url;
+
+                HttpClient client = new HttpClient();
+
+                HttpMethod method = new GetMethod(url);
+
+                int retCode=client.executeMethod(method);
+                if (retCode!=HttpStatus.SC_OK)
+                {
+                        System.out.println("Failed :"+method.getStatusLine());
+                        System.exit(1);
+                }
+                byte[] responseBody = method.getResponseBody();
+                System.out.println(new String(responseBody));
+        }
+}
