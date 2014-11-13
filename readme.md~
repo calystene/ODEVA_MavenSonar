@@ -21,7 +21,3 @@ mvn_http
 3. mvn test === > Success (5 runs, 0 failure)
 
 
-#### Intégration avec Sonar
-
-
-
