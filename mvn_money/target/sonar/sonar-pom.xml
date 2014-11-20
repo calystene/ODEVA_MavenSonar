@@ -7,12 +7,6 @@
   <version>1.0-SNAPSHOT</version>
   <name>Mon Premier Maven En ODEVA</name>
   <url>http://maven.apache.org</url>
-  <properties>
-    <sonar.jdbc.url>jdbc:h2:tcp://localhost:9092/sonar</sonar.jdbc.url>
-    <sonar.jdbc.password>sonar</sonar.jdbc.password>
-    <sonar.host.url>http://localhost:9000</sonar.host.url>
-    <sonar.jdbc.username>sonar</sonar.jdbc.username>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>commons-httpclient</groupId>
@@ -34,7 +28,7 @@
       </snapshots>
       <id>central</id>
       <name>Central Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
+      <url>http://repo.maven.apache.org/maven2</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -47,26 +41,26 @@
       </snapshots>
       <id>central</id>
       <name>Central Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
+      <url>http://repo.maven.apache.org/maven2</url>
     </pluginRepository>
   </pluginRepositories>
   <build>
-    <sourceDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/src/main/java</sourceDirectory>
-    <scriptSourceDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/src/main/scripts</scriptSourceDirectory>
-    <testSourceDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/src/test/java</testSourceDirectory>
-    <outputDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/target/classes</outputDirectory>
-    <testOutputDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/target/test-classes</testOutputDirectory>
+    <sourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/main/java</sourceDirectory>
+    <scriptSourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/test/java</testSourceDirectory>
+    <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/classes</outputDirectory>
+    <testOutputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/test-classes</testOutputDirectory>
     <resources>
       <resource>
-        <directory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/src/main/resources</directory>
+        <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/main/resources</directory>
       </resource>
     </resources>
     <testResources>
       <testResource>
-        <directory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/src/test/resources</directory>
+        <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/test/resources</directory>
       </testResource>
     </testResources>
-    <directory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/target</directory>
+    <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target</directory>
     <finalName>monPremierMavenEnODEVA-1.0-SNAPSHOT</finalName>
     <pluginManagement>
       <plugins>
@@ -80,11 +74,11 @@
         </plugin>
         <plugin>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>2.8</version>
+          <version>2.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.3.2</version>
+          <version>2.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -123,7 +117,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
-        <version>2.5</version>
+        <version>2.3</version>
         <executions>
           <execution>
             <id>default-clean</id>
@@ -136,7 +130,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-install-plugin</artifactId>
-        <version>2.4</version>
+        <version>2.3</version>
         <executions>
           <execution>
             <id>default-install</id>
@@ -149,7 +143,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>2.6</version>
+        <version>2.3</version>
         <executions>
           <execution>
             <id>default-resources</id>
@@ -169,7 +163,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>2.4</version>
+        <version>2.2</version>
         <executions>
           <execution>
             <id>default-jar</id>
@@ -195,7 +189,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.0</version>
         <executions>
           <execution>
             <id>default-site</id>
@@ -204,7 +198,7 @@
               <goal>site</goal>
             </goals>
             <configuration>
-              <outputDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/target/site</outputDirectory>
+              <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -220,7 +214,7 @@
               <goal>deploy</goal>
             </goals>
             <configuration>
-              <outputDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/target/site</outputDirectory>
+              <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -231,7 +225,7 @@
           </execution>
         </executions>
         <configuration>
-          <outputDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/target/site</outputDirectory>
+          <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
           <reportPlugins>
             <reportPlugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -242,7 +236,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.12.4</version>
+        <version>2.10</version>
         <executions>
           <execution>
             <id>default-test</id>
@@ -253,13 +247,13 @@
           </execution>
         </executions>
         <configuration>
-          <argLine>-javaagent:/tmp/jacocoagent321179578634079677.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
+          <argLine>-javaagent:/tmp/jacocoagent543233510256374479.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <reporting>
-    <outputDirectory>/home/tom/Etudes/MIAGE/S7/ODEVA/ODEVA_MavenSonar/mvn_money/target/site</outputDirectory>
+    <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
   </reporting>
 </project>
