@@ -45,22 +45,22 @@
     </pluginRepository>
   </pluginRepositories>
   <build>
-    <sourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/main/java</sourceDirectory>
-    <scriptSourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/main/scripts</scriptSourceDirectory>
-    <testSourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/test/java</testSourceDirectory>
-    <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/classes</outputDirectory>
-    <testOutputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/test-classes</testOutputDirectory>
+    <sourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/src/main/java</sourceDirectory>
+    <scriptSourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/src/test/java</testSourceDirectory>
+    <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/target/classes</outputDirectory>
+    <testOutputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/target/test-classes</testOutputDirectory>
     <resources>
       <resource>
-        <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/main/resources</directory>
+        <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/src/main/resources</directory>
       </resource>
     </resources>
     <testResources>
       <testResource>
-        <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/src/test/resources</directory>
+        <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/src/test/resources</directory>
       </testResource>
     </testResources>
-    <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target</directory>
+    <directory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/target</directory>
     <finalName>monPremierMavenEnODEVA-1.0-SNAPSHOT</finalName>
     <pluginManagement>
       <plugins>
@@ -162,6 +162,19 @@
         </executions>
       </plugin>
       <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.10</version>
+        <executions>
+          <execution>
+            <id>default-test</id>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <version>2.2</version>
         <executions>
@@ -198,7 +211,7 @@
               <goal>site</goal>
             </goals>
             <configuration>
-              <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
+              <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/target/site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -214,7 +227,7 @@
               <goal>deploy</goal>
             </goals>
             <configuration>
-              <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
+              <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/target/site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -225,7 +238,7 @@
           </execution>
         </executions>
         <configuration>
-          <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
+          <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/target/site</outputDirectory>
           <reportPlugins>
             <reportPlugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -234,26 +247,9 @@
           </reportPlugins>
         </configuration>
       </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.10</version>
-        <executions>
-          <execution>
-            <id>default-test</id>
-            <phase>test</phase>
-            <goals>
-              <goal>test</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <argLine>-javaagent:/tmp/jacocoagent1446688332811422878.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
-          <testFailureIgnore>true</testFailureIgnore>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
   <reporting>
-    <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_money/target/site</outputDirectory>
+    <outputDirectory>/home/m1miage/pierard/Documents/Odeva/Maven/mvn_http/target/site</outputDirectory>
   </reporting>
 </project>

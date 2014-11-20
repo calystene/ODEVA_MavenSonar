@@ -1,5 +1,7 @@
 package  fr.ulille1.fil.odeva;
 
+import java.util.HashMap;
+
 public class Money {
 	private int value;
 	private String currency;
