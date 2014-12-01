@@ -23,6 +23,6 @@
 #### Intégration avec Sonar
 1. Inclusion du fichier sonar-project.properties
 2. Execution de la commande mvn sonar:sonar
-3. Correction des remarques relevés par sonar pour atteindre un taux de 95% de succès
+3. Correction des remarques relevés par sonar pour atteindre un taux de 95,7% Rules compliance
 
 
