@@ -24,5 +24,9 @@
 1. Inclusion du fichier sonar-project.properties
 2. Execution de la commande mvn sonar:sonar
 3. Correction des remarques relevés par sonar pour atteindre un taux de 95,7% Rules compliance
+    * Suppression de la règle de tabulation
+    * Suppression des underscores des variables final
+    * écriture de la méthode hashCode() dans Money
+    * et d'autres modifications dont je n'ai plus le souvenir...
 
 
